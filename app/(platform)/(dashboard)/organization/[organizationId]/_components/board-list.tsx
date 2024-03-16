@@ -35,7 +35,7 @@ export const BoardList = async () => {
         {boards.map((board) => (
           <Link
             key={board.id}
-            href={`board/${board.id}`}
+            href={`/board/${board.id}`}
             className="group relative aspect-video bg-no-repeat bg-center bg-cover bg-sky-700 rounded-sm h-full w-full p-2 overflow-hidden"
             style={{ backgroundImage: `url(${board.imageThumbUrl})` }}
           >
@@ -65,7 +65,7 @@ export const BoardList = async () => {
   );
 };
 
-BoardList.Skeleton = function SkeletonBoard() {
+BoardList.Skeleton = function SkeletonBoardList() {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
       <Skeleton className="aspect-video h-full w-full p-2" />
